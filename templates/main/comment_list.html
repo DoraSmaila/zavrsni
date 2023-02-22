@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+<br>
+<h2>Comments</h2>
+<br>
+
+{% for comment in comment_list %}
+    <div class="comment">
+        <h4>Comment ID: {{ comment.comment_id }}</h4>
+        Content: {{comment.content}}<br>
+        Commented by user: {{comment.user_comment}}<br>
+        Time of commenting: {{comment.time_commented}}<br>
+    </div>
+
+{% endfor %}
+{% endblock %}

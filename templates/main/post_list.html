@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+<br>
+<h2>Posts</h2>
+<br>
+
+{% for post in post_list %}
+    <div class="post">
+        <h4>Post ID: {{ post.post_id }}</h4>
+        Content: {{post.content}}
+        Created by user: {{post.created_by}}<br>
+        Time of posting: {{post.time_posted}}<br>
+        Likes: {{ post.likes }}<br>
+        Comments: {{post.comments}}<br>
+    </div>
+
+{% endfor %}
+{% endblock %}

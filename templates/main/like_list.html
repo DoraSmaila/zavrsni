@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+<br>
+<h2>Likes</h2>
+<br>
+
+{% for like in like_list %}
+    <div class="like">
+        <h4>Like ID: {{ like.like_id }}</h4>
+        Like by user: {{like.user_like}}<br>
+        Time of liking: {{like.time_liked}}<br>
+    </div>
+
+{% endfor %}
+{% endblock %}
